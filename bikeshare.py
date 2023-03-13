@@ -6,6 +6,8 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+seperator_length = 40
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -79,7 +81,7 @@ def get_filters():
         else:
             print('No filter will applied for day\n')
             
-    print('-'*40)
+    print('-'*seperator_length)
     return city.lower(), month.lower(), day.lower()
 
 
@@ -136,7 +138,7 @@ def time_stats(df):
     print('The mostly used hour is {}\n'.format(df['hour'].mode()[0]))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*seperator_length)
 
 
 def station_stats(df):
@@ -167,7 +169,7 @@ def station_stats(df):
     print('The most common trip is from {} to {} with {} trips.\n'.format(start_station,end_station,trip_count))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*seperator_length)
 
 
 def trip_duration_stats(df):
@@ -187,7 +189,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*seperator_length)
 
 
 def user_stats(df,city):
@@ -216,7 +218,7 @@ def user_stats(df,city):
         print('\nSkipping gender and age statistics for Washington, because Washington does not have any related data.\n')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*seperator_length)
 
 def display_data(df,record_count):
     """
