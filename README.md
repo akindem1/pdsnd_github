@@ -4,13 +4,18 @@
 This project is created on March 13th, 2023
 
 ### Project Title
-Replace the Project Title
+Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+In this project data related to bike share systems for three major cities in the United States:
+- **Chicago** 
+- **New York City**
+- **Washington** 
+is explored using Python
 
 ### Files used
-Include the files used
+The project consists of the following files:
+- bikeshare.py
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
