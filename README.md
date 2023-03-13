@@ -1,17 +1,23 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 ### Date created
-Include the date you created this project and README file.
+This project is created on March 13th, 2023
 
 ### Project Title
-Replace the Project Title
+Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+In this project data related to bike share systems for three major cities in the United States:
+- **Chicago** 
+- **New York City**
+- **Washington** 
+is explored using Python.
+
+The related city's data is imported and filtered according to user's selection and descriptive statistics are computed.
+After the statistical data is displayed, user is asked for input to see raw data. If they chose to do so, raw data is displayed in chunks, until the user choses to quit.
 
 ### Files used
-Include the files used
+The project consists of the following files:
+- bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+I would like to thank my family for their support during my nanodegree studies. 
+I would also like to thank project reviewers for their valuable comments
