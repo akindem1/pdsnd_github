@@ -9,7 +9,9 @@ In this project data related to bike share systems for three major cities in the
 - **Chicago** 
 - **New York City**
 - **Washington** 
-is explored using Python
+is explored using Python.
+
+The related city's data is imported and filtered according to user's selection and descriptive statistics are computed.
 
 ### Files used
 The project consists of the following files:
