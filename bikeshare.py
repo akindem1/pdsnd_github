@@ -218,6 +218,25 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def display_data(df,record_count):
+    """
+    Asks User whether to display raw data or not. 
+    If the user selects to display raw data, displays records of the dataframe in batches until the user selects to stop  
+    
+    Args:
+        (Pandas DataFrame) df - Pandas DataFrame containing data to be displayed
+        (int) record_count - Number of records to display in each batch 
+    """
+    view_data = input('\nWould you like to view {} rows of individual trip data? Enter yes or no\n'.format(record_count)).lower()
+    start_loc = 0
+    while (view_data == 'yes' and start_loc < df.shape[0]):
+        print(df.iloc[start_loc:start_loc + record_count])
+        start_loc += record_count
+        if(start_loc >= df.shape[0]) :
+            print('Reached the end of all data.')
+            break
+        else :
+            view_data = input("Do you wish to continue?: Enter yes to continue.\n").lower()
 
 def main():
     while True:
@@ -230,17 +249,8 @@ def main():
         user_stats(df,city)
         
         record_count = 5
-        view_data = input('\nWould you like to view {} rows of individual trip data? Enter yes or no\n'.format(record_count)).lower()
-        start_loc = 0
-        while (view_data == 'yes' and start_loc < df.shape[0]):
-            print(df.iloc[start_loc:start_loc + record_count])
-            start_loc += record_count
-            if(start_loc >= df.shape[0]) :
-                print('Reached the end of all data.')
-                break
-            else :
-                view_data = input("Do you wish to continue?: Enter yes to continue.\n").lower()
-
+        display_data(df,record_count)
+        
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
