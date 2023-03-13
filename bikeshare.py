@@ -229,11 +229,12 @@ def main():
         trip_duration_stats(df)
         user_stats(df,city)
         
-        view_data = input('\nWould you like to view {} rows of individual trip data? Enter yes or no\n'.format(5)).lower()
+        record_count = 5
+        view_data = input('\nWould you like to view {} rows of individual trip data? Enter yes or no\n'.format(record_count)).lower()
         start_loc = 0
         while (view_data == 'yes' and start_loc < df.shape[0]):
-            print(df.iloc[start_loc:start_loc + 5])
-            start_loc += 5
+            print(df.iloc[start_loc:start_loc + record_count])
+            start_loc += record_count
             if(start_loc >= df.shape[0]) :
                 print('Reached the end of all data.')
                 break
